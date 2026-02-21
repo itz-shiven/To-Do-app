@@ -220,3 +220,25 @@ p{
         transform:translateY(0);
     }
 }
+#logoutBtn {
+    position: fixed;       /* screen ke saath fixed */
+    bottom: 20px;          /* bottom se gap */
+    right: 20px;           /* right se gap */
+    
+    padding:4px 9px;       /* existing size */
+    font-size:11px;        /* existing size */
+    border-radius:5px;
+    border:none;
+    cursor:pointer;
+    transition:.2s;
+    width:100px;            /* existing width */
+    background:#ff4d4d;    /* color */
+    color:white;
+    font-weight:600;
+    z-index: 1000;         /* hamesha top layer */
+}
+
+#logoutBtn:hover {
+    background:#ff1a1a;
+    transform: translateY(-2px);
+}

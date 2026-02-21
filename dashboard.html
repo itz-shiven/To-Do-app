@@ -6,26 +6,24 @@
 </head>
 
 <body>
-  
-<div class="greeting-bar" id="greetingBar"></div>
-<div class="task-container">
-  
 
+  <div class="greeting-bar" id="greetingBar"></div>
 
-  <h2>My Tasks</h2>
+  <!-- LOGOUT BUTTON -->
+  <button id="logoutBtn">Logout</button>
 
-  <div class="add-task">
-    <input id="taskInput" type="text" placeholder="Enter task">
-    <button id="addTaskBtn">Add</button>
+  <div class="task-container">
+      <h2>My Tasks</h2>
+
+      <div class="add-task">
+        <input id="taskInput" type="text" placeholder="Enter task">
+        <button id="addTaskBtn">Add</button>
+      </div>
+
+      <ul id="taskList"></ul>
   </div>
 
-  <ul id="taskList"></ul>
-
-</div>
-
-
-
-<script src="dashboard.js"></script>
+  <script src="dashboard.js"></script>
 
 </body>
 </html>
