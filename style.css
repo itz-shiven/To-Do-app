@@ -1,0 +1,222 @@
+/* ================= RESET ================= */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:"Segoe UI", Tahoma, sans-serif;
+}
+
+/* ================= BODY ================= */
+body{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:linear-gradient(135deg,#0f2027,#203a43,#2c5364);
+    color:white;
+    padding-top: 70px;
+}
+
+/* ================= COMMON GLASS CARD ================= */
+.glass{
+    background:rgba(255,255,255,0.08);
+    backdrop-filter:blur(12px);
+    box-shadow:0 10px 35px rgba(0,0,0,0.35);
+    border-radius:16px;
+}
+
+/* ================= LOGIN / REGISTER ================= */
+.container{
+    width:350px;
+    padding:35px;
+    text-align:center;
+}
+
+.container h1{
+    margin-bottom:20px;
+    font-weight:600;
+}
+
+/* INPUT */
+input{
+    width:100%;
+    padding:12px;
+    margin:10px 0;
+    border-radius:8px;
+    border:none;
+    outline:none;
+    background:rgba(255,255,255,0.15);
+    color:white;
+    font-size:14px;
+}
+
+input::placeholder{
+    color:#ddd;
+}
+
+/* BUTTON */
+button{
+    width:100%;
+    padding:12px;
+    margin-top:12px;
+    border:none;
+    border-radius:8px;
+    background:linear-gradient(to right,#0072ff,#00c6ff);
+    color:white;
+    font-size:15px;
+    font-weight:600;
+    cursor:pointer;
+    transition:.25s;
+}
+
+button:hover{
+    transform:translateY(-2px);
+    box-shadow:0 6px 18px rgba(0,0,0,0.4);
+}
+
+/* SECOND BUTTON */
+.container button:last-child{
+    background:transparent;
+    border:1px solid #00c6ff;
+}
+
+p{
+    color:#ddd;
+    margin-top:15px;
+}
+
+/* ================= DASHBOARD ================= */
+.dashboard{
+    display:flex;
+    flex-direction:column;
+    gap:15px;
+}
+
+/* ================= GREETING BAR ================= */
+#greeting{
+    padding:14px 18px;
+    font-size:18px;
+    font-weight:600;
+    border-radius:12px;
+    background:linear-gradient(
+        135deg,
+        rgba(255,255,255,0.18),
+        rgba(255,255,255,0.05)
+    );
+    box-shadow:0 6px 20px rgba(0,0,0,0.25);
+    animation:fadeSlide .6s ease;
+}
+/* ================= GREETING TOP BAR ================= */
+.greeting-bar{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+
+    padding: 14px 25px;
+    font-size: 18px;
+    font-weight: 600;
+    color: white;
+
+    background: linear-gradient(90deg,#0072ff,#00c6ff);
+    box-shadow: 0 3px 12px rgba(0,0,0,0.3);
+    z-index: 1000;
+}
+
+/* ================= TASK CONTAINER ================= */
+.task-container{
+    width:420px;
+    padding:22px;
+}
+
+/* ================= ADD TASK ================= */
+.add-task{
+    display:flex;
+    flex-direction:column;
+    gap:8px;
+    margin-bottom:15px;
+}
+
+.add-task input{
+    height:42px;
+}
+
+/* SMALL ADD BUTTON RIGHT */
+.add-task button{
+    width:90px;
+    padding:6px 10px;
+    font-size:12px;
+    border-radius:6px;
+    align-self:flex-end;
+    margin-top:0;
+}
+
+/* ================= TASK LIST ================= */
+#taskList{
+    list-style:none;
+}
+
+/* TASK CARD */
+#taskList li{
+    background:rgba(255,255,255,0.12);
+    padding:10px 12px;
+    margin-bottom:10px;
+    border-radius:10px;
+    display:flex;
+    flex-direction:column;
+    gap:6px;
+    transition:.2s;
+}
+
+#taskList li:hover{
+    background:rgba(255,255,255,0.18);
+}
+
+/* ================= ACTION BUTTON ROW ================= */
+.task-actions{
+    display:flex;
+    justify-content:flex-end;
+    gap:6px;
+}
+
+/* COMPACT BUTTONS */
+.edit-btn,
+.delete-btn{
+    padding:4px 9px;
+    font-size:11px;
+    border-radius:5px;
+    width:50px;
+    border:none;
+    cursor:pointer;
+    transition:.2s;
+}
+
+/* COLORS */
+.edit-btn{
+    background:#00c6ff;
+}
+
+.delete-btn{
+    background:#ff4d4d;
+}
+
+/* HOVER */
+.edit-btn:hover{
+    background:#0095cc;
+}
+
+.delete-btn:hover{
+    background:#ff1a1a;
+}
+
+/* ================= ANIMATION ================= */
+@keyframes fadeSlide{
+    from{
+        opacity:0;
+        transform:translateY(-10px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
